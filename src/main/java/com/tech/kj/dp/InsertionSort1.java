@@ -7,7 +7,7 @@ class InsertionSort1 {
     
    int[] array= {20,54,-15,-9,0,45,2,11};
     
-    
+    int swapCounter = 0;
     for(int index = 1; index < array.length; index++){
      
       int nextElement = array[index];
@@ -15,10 +15,12 @@ class InsertionSort1 {
         int sorted=array[i];
         if(nextElement<sorted){
           swap(array,index,i);
+          ++swapCounter;
         }
       }
     }
     show(array);
+    System.out.println("number of swaped: "+swapCounter);
   }
   
   public static void swap(int[] array,int i,int j){
